@@ -5,3 +5,28 @@
 
     --adm-font-size-main: .28rem;
 }
+html,body,#root {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,li {
+    margin: 0;
+}
+
+.adm-search-bar {
+    --height: .6rem;
+    --border-radius: .6rem;
+    max-width: 100%;
+    flex: 1 1;
+    padding: 0 .15rem;
+}
+
+.adm-search-bar .adm-search-bar-input-box .adm-search-bar-input .adm-input-element {
+    font-size: .2rem;
+}
+
+.adm-index-bar-sticky .adm-index-bar-anchor-title {
+    height: .5rem;
+    font-size: var(--adm-font-size-main)
+}
