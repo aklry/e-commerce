@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
 import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension'
 import './global.css'
 import Routes from './router'
-
-const store = createStore(() => { }, composeWithDevTools())
+import { store } from './store'
 ReactDOM.render(
   <Provider store={store}>
     { Routes }
