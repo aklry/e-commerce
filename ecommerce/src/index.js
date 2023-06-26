@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension'
+import './global.css'
+import Routes from './router'
 
 const store = createStore(() => { }, composeWithDevTools())
 ReactDOM.render(
   <Provider store={store}>
-    <div>开始写项目了</div>
+    { Routes }
   </Provider>,
   document.getElementById('root')
 );
