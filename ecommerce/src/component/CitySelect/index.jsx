@@ -5,8 +5,8 @@ import cities from './city'
 export default function CitySelect(props) {
     const { getCityName } = props
     //选中城市
-    const selectCity = name => {
-        getCityName && getCityName(name)
+    const selectCity = city => {
+        getCityName && getCityName(city)
     }
     return (
         <div style={{ height: window.innerHeight }}>
@@ -22,7 +22,7 @@ export default function CitySelect(props) {
                             >
                                 <List>
                                     {data.map((item, index) => (
-                                        <List.Item key={index} onClick={ () => selectCity(item.name) }>{item.name}</List.Item>
+                                        <List.Item key={index} onClick={ () => selectCity(item) }>{item.name}</List.Item>
                                     ))}
                                 </List>
                             </IndexBar.Panel>
