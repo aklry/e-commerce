@@ -23,3 +23,15 @@ p,h1,h2,h3,h4,h5,h6,ul,ol,li {
     height: .5rem;
     font-size: var(--adm-font-size-main)
 }
+
+.content {
+    position: relative;
+    width: 100%;
+    height: calc(100% - .9rem);
+    top: .9rem;
+    overflow: auto;
+}
+
+.adm-divider {
+    font-size: var(--adm-font-size-main);
+}

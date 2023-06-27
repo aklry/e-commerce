@@ -4,7 +4,7 @@ import { UnorderedListOutline, DownOutline } from 'antd-mobile-icons'
 import { useNavigate } from 'react-router-dom'
 import { SearchBar, Space, Popup } from 'antd-mobile'
 import CitySelect from '../../component/CitySelect'
-import { setCityName } from '../../store/actions/citySelectAction'
+import { setCityName } from '../../store/actions/citySelect'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function Header() {
