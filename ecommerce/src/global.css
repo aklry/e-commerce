@@ -3,6 +3,7 @@ html,body,#root {
     padding: 0;
     margin: 0;
 }
+
 p,h1,h2,h3,h4,h5,h6,ul,ol,li {
     margin: 0;
 }
@@ -13,6 +14,18 @@ p,h1,h2,h3,h4,h5,h6,ul,ol,li {
     max-width: 100%;
     flex: 1 1;
     padding: 0 .15rem;
+}
+
+.adm-nav-bar-title {
+    width: 5.2rem;
+}
+
+.adm-nav-bar-left {
+    width: 0.3rem;
+}
+
+.adm-search-bar .antd-mobile-icon {
+    font-size: .3rem;
 }
 
 .adm-search-bar .adm-search-bar-input-box .adm-search-bar-input .adm-input-element {
@@ -34,4 +47,9 @@ p,h1,h2,h3,h4,h5,h6,ul,ol,li {
 
 .adm-divider {
     font-size: var(--adm-font-size-main);
+}
+
+/*取消页面滚动条*/
+::-webkit-scrollbar {
+    width: 0;
 }
