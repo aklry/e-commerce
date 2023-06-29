@@ -1,3 +1,10 @@
+:root:root {
+    --adm-color-primary: #1677ff;
+    --adm-color-light: #1677ff;
+  
+    --adm-font-size-main: .28rem;
+  }
+
 html,body,#root {
     height: 100%;
     padding: 0;
@@ -52,4 +59,13 @@ p,h1,h2,h3,h4,h5,h6,ul,ol,li {
 /*取消页面滚动条*/
 ::-webkit-scrollbar {
     width: 0;
+}
+
+.adm-tag {
+ margin: .08rem;
+ color: #686868;
+ background-color: #f0f2f5;
+ padding: .15rem; 
+ border-radius: .12rem;
+ font-size: inherit;
 }
