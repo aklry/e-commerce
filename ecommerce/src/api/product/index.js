@@ -3,13 +3,12 @@ import {
 } from "../base";
 
 const base = {
-    getList: '/types/getList'
+    getTypeList: '/types/getList',
+    getProductHotWords: '/search/hotWords'
 }
-
 const api = {
-    getList(pid) {
-        return global.axios.get(baseUrl + base.getList, {params: {pid}})
-    }
+    getList:  pid =>  global.axios.get(baseUrl + base.getTypeList, {params: {pid}}), //根据商品pid获取数据
+    getProductHotWords:() => global.axios.get(baseUrl + base.getProductHotWords), //热词搜索
 }
 
 export default api;
