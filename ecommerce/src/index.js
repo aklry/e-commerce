@@ -4,6 +4,10 @@ import { Provider } from 'react-redux';
 import './global.css'
 import Routes from './router'
 import { store } from './store'
+import axios from './utils/request'
+
+
+global.axios = axios
 ReactDOM.render(
   <Provider store={store}>
     { Routes }
