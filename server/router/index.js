@@ -3,7 +3,9 @@ const express = require('express')
 const router = express.Router()
 
 const types = require('./type')
+const product = require('./product')
 
 router.use('/types', types)
+router.use('/search', product)
 
 module.exports = router
