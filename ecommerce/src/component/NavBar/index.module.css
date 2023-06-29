@@ -1,0 +1,15 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 0.9rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.nav :global(.adm-nav-bar-back-arrow) {
+    font-size: .4rem;
+}
+
+.nav :global(.adm-nav-bar) {
+    height: 100%;
+}
