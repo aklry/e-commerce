@@ -1,0 +1,17 @@
+.filterContainer {
+    display: flex;
+    align-items: center;
+}
+
+.filterContainer :global(.adm-dropdown) {
+    flex: 2;
+}
+
+.filterTitle {
+    flex: 1;
+}
+
+.filterContainer :global(.adm-dropdown-item .adm-dropdown-item-title),
+.filterContainer :global(.adm-dropdown-item .adm-dropdown-item-title-arrow) {
+    font-size: inherit;
+}
