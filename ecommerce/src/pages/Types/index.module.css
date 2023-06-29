@@ -1,0 +1,49 @@
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.side {
+    width: 1.76rem;
+    height: 100%;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.link {
+    height: 0.92rem;
+    line-height: .92rem;
+    text-align: center;
+    color: #333;
+    margin: 0;
+}
+
+.selectedLink {
+    height: 0.92rem;
+    line-height: .92rem;
+    text-align: center;
+    color: #f60;
+    margin: 0;
+    background-color: #fff;
+}
+
+.content {
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+    padding: .2rem .1rem 2rem .1rem;
+    box-sizing: border-box;
+}
+
+.content > div {
+    color: #333;
+    padding: .15rem;
+    text-align: center;
+}
+
+.content img {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-bottom: .1rem;
+}
