@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
 import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension'
 import './global.css'
 import Routes from './router'
+import { store } from './store'
+import axios from './utils/request'
 
-const store = createStore(() => { }, composeWithDevTools())
+
+global.axios = axios
 ReactDOM.render(
   <Provider store={store}>
     { Routes }

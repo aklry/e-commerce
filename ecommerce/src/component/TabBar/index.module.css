@@ -1,0 +1,18 @@
+.container :global(.adm-tab-bar){
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #eee;
+    background: #fff;
+}
+
+.container :global(.adm-tab-bar-item-icon) {
+    font-size: .38rem;
+    height: inherit;
+    line-height: initial;
+}
+
+.container :global(.adm-tab-bar-item-title) {
+    font-size: inherit;
+    line-height: initial;
+}

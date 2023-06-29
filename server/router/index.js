@@ -2,17 +2,10 @@ const express = require('express')
 //http://localhost:3030/api/product
 const router = express.Router()
 
-const sqlHandler = require('../mysql/index')
+const types = require('./type')
+const product = require('./product')
 
-router.get('/product', (req, res, next) => {
-    const sql = 'select * from product where id = ?'
-    sqlHandler(sql, [1], results => {
-        res.send({
-            code: 200,
-            records: results
-        })
-    })
-
-})
+router.use('/types', types)
+router.use('/search', product)
 
 module.exports = router

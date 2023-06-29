@@ -1,16 +1,29 @@
 :root:root {
     --adm-color-primary: #1677ff;
 
-    --adm-color-light: #cccccc;
-
     --adm-font-size-main: .28rem;
+
+    --adm-color-light: #1677ff;
 }
-html,body,#root {
+
+html,
+body,
+#root {
     height: 100%;
     padding: 0;
     margin: 0;
 }
-p,h1,h2,h3,h4,h5,h6,ul,ol,li {
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
     margin: 0;
 }
 
@@ -22,6 +35,18 @@ p,h1,h2,h3,h4,h5,h6,ul,ol,li {
     padding: 0 .15rem;
 }
 
+.adm-nav-bar-title {
+    width: 5.2rem;
+}
+
+.adm-nav-bar-left {
+    width: 0.3rem;
+}
+
+.adm-search-bar .antd-mobile-icon {
+    font-size: .3rem;
+}
+
 .adm-search-bar .adm-search-bar-input-box .adm-search-bar-input .adm-input-element {
     font-size: .2rem;
 }
@@ -29,4 +54,30 @@ p,h1,h2,h3,h4,h5,h6,ul,ol,li {
 .adm-index-bar-sticky .adm-index-bar-anchor-title {
     height: .5rem;
     font-size: var(--adm-font-size-main)
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: calc(100% - .9rem);
+    top: .9rem;
+    overflow: auto;
+}
+
+.adm-divider {
+    font-size: var(--adm-font-size-main);
+}
+
+/*取消页面滚动条*/
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.adm-tag {
+    margin: .08rem;
+    color: #686868;
+    background-color: #f0f2f5;
+    padding: .15rem;
+    border-radius: .12rem;
+    font-size: inherit;
 }
