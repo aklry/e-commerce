@@ -12,6 +12,18 @@
 }
 
 .filterContainer :global(.adm-dropdown-item .adm-dropdown-item-title),
-.filterContainer :global(.adm-dropdown-item .adm-dropdown-item-title-arrow) {
+.filterContainer :global(.adm-dropdown-item .adm-dropdown-item-title-arrow),
+.content :global(.adm-selector) {
     font-size: inherit;
+}
+
+.content :global(.adm-selector) {
+    background-color: #fff;
+    padding: .2rem;
+}
+
+.content h4 {
+    padding: .2rem;
+    background-color: #fff;
+    margin-bottom: .15rem;
 }
