@@ -14,5 +14,18 @@ router.get('/getList', (req, res, next) => {
     })
 
 })
+//获取商品分类的id值
+router.get('/getTypeId', (req, res, next) => {
+    const sql = 'select * from types where locate(name,?)'
+    const { name } = req.query
+    sqlHandler(sql, [name], results => {
+        const data = results && results.length ? results[0] : {}
+        res.send({
+            code: '00000',
+            record: data
+        })
+    })
+
+})
 
 module.exports = router
