@@ -22,7 +22,7 @@ export default function CitySelect(props) {
                             >
                                 <List>
                                     {data.map((item, index) => (
-                                        <List.Item key={index} onClick={ () => selectCity(item) }>{item.name}</List.Item>
+                                        <List.Item arrow={ false } key={index} onClick={ () => selectCity(item) }>{item.name}</List.Item>
                                     ))}
                                 </List>
                             </IndexBar.Panel>
