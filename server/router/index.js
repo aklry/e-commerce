@@ -6,6 +6,6 @@ const types = require('./type')
 const product = require('./product')
 
 router.use('/types', types)
-router.use('/search', product)
+router.use('/product', product)
 
 module.exports = router

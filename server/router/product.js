@@ -26,6 +26,8 @@ router.get('/getBrand', (req, res, next) => {
 
 })
 
+
+//获取商品列表
 router.get('/getProduct', (req, res, next) => {
     const { count = 0, name, brand, price, sale, city } = req.query
     const sortPrice = price == 2 ? ' desc' : ' asc'
@@ -50,6 +52,18 @@ router.get('/getProduct', (req, res, next) => {
         )
     })
 
+})
+
+//获取商品详情
+router.get('/getDetails', (req, res, next) => {
+    const sql = 'select * from product where id=?'
+    const { id } = req.query
+    sqlHandler(sql, [id], results => {
+        res.send({
+            code: '00000',
+            record: results[0]
+        })
+    })
 })
 
 module.exports = router
