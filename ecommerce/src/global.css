@@ -64,7 +64,10 @@ li {
     overflow: auto;
 }
 
-.adm-divider {
+.adm-divider,
+.adm-infinite-scroll,
+.adm-popover-inner,
+.adm-popover-menu-item-icon{
     font-size: var(--adm-font-size-main);
 }
 
@@ -80,4 +83,11 @@ li {
     padding: .15rem;
     border-radius: .12rem;
     font-size: inherit;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
 }
