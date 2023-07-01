@@ -14,5 +14,42 @@ router.get('/hotWords', (req, res, next) => {
     })
 
 })
+router.get('/getBrand', (req, res, next) => {
+    const sql = 'select * from brand where productType = ?'
+    const { productType } = req.query
+    sqlHandler(sql, [productType], results => {
+        res.send({
+            code: '00000',
+            records: results
+        })
+    })
+
+})
+
+router.get('/getProduct', (req, res, next) => {
+    const { count = 0, name, brand, price, sale, city } = req.query
+    const sortPrice = price == 2 ? ' desc' : ' asc'
+    const brandArr = brand ? brand.split(',') : []
+    const brandStr = brandArr.length ?
+        brandArr.map((item, index) =>
+            (`brand=${item} ${index == brandArr.length - 1 ? '' : 'or '}`)).join(' ')
+        : 'brand is not null'
+    const sql = `select * from product
+    where ${name ? 'locate(?,name)>0' : 'name is not null'}
+    and ${city ? 'city=?' : 'city is not null'}  
+    and ${brandStr} 
+    ${sale == 'false' && price ? 'order by price' + sortPrice : ''} 
+    ${sale == 'true' ? 'order by sale desc' : ''}
+    limit ${8 * (count)},8`
+    sqlHandler(sql, [name, city], results => {
+        res.send(
+            {
+                code: '00000',
+                records: results
+            }
+        )
+    })
+
+})
 
 module.exports = router
