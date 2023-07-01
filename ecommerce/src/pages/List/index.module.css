@@ -1,0 +1,19 @@
+
+.list :global(.price) {
+    color: red;
+}
+
+.list :global(.sale) {
+    color: #777;
+}
+
+.list :global(.text) {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.list :global(.adm-grid-item) {
+	height: 2.7rem;
+} 
