@@ -5,6 +5,7 @@ import { SpinLoading } from 'antd-mobile'
 const Types = React.lazy(() => import('../pages/Types'))
 const SearchPage = React.lazy(() => import('../pages/Search'))
 const ListPage = React.lazy(() => import('../pages/List'))
+const DetailPage = React.lazy(() => import('../pages/Detail'))
 
 
 export default (
@@ -15,6 +16,7 @@ export default (
                 <Route path='/types' element={<Types />} />
                 <Route path='/search' element={<SearchPage />} />
                 <Route path='/list' element={<ListPage />} />
+                <Route path='/details' element={<DetailPage />} />
             </Routes>
         </BrowserRouter>
     </Suspense>
