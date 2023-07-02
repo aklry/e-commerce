@@ -1,0 +1,15 @@
+.container {
+    text-align: center;
+}
+
+.container :global(.adm-error-block) {
+    --image-height-full-page: 4rem;
+}
+
+.container :global(.adm-error-block-full-page, .adm-error-block-description-title) {
+    font-size: .38rem;
+}
+
+.container :global(.adm-error-block-description) {
+    font-size: inherit;
+}
