@@ -23,3 +23,8 @@ window.onload = function () {
 window.onresize = function () {
   document.documentElement.style.fontSize = (document.documentElement.clientWidth / 750) * 100 + 'px'
 }
+
+//捕捉错误并显示在页面上
+window.addEventListener('unhandledrejection', err => {
+  window.location.href = '/error'
+})
