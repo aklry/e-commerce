@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import { SpinLoading } from 'antd-mobile'
+import ErrorPage from '../pages/Error'
 const Types = React.lazy(() => import('../pages/Types'))
 const SearchPage = React.lazy(() => import('../pages/Search'))
 const ListPage = React.lazy(() => import('../pages/List'))
@@ -17,6 +18,7 @@ export default (
                 <Route path='/search' element={<SearchPage />} />
                 <Route path='/list' element={<ListPage />} />
                 <Route path='/details' element={<DetailPage />} />
+                <Route path='/error' element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
     </Suspense>
