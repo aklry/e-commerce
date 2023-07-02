@@ -1,0 +1,47 @@
+.swiper {
+    height: 6rem;
+}
+
+.swiper :global(.adm-swiper) {
+    height: 100%;
+}
+
+.swiper img {
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    position: fixed;
+    top: 0.2rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    line-height: .6rem;
+    text-align: center;
+    border-radius: .6rem;
+    color: #fff;
+    background: #666666b5;
+    font-size: .4rem;
+}
+
+.space {
+    width: 100%;
+    padding: .18rem 0;
+}
+
+.price {
+    color: red;
+    font-size: .4rem;
+}
+
+.star {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .2rem;
+}
+
+.star :global(.antd-mobile-icon) {
+    font-size: .4rem;
+}
+
