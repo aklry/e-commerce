@@ -67,7 +67,8 @@ li {
 .adm-divider,
 .adm-infinite-scroll,
 .adm-popover-inner,
-.adm-popover-menu-item-icon{
+.adm-popover-menu-item-icon,
+.adm-toast-mask .adm-toast-main {
     font-size: var(--adm-font-size-main);
 }
 
