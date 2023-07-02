@@ -66,4 +66,41 @@ router.get('/getDetails', (req, res, next) => {
     })
 })
 
+//收藏商品
+router.post('/star', (req, res, next) => {
+    const sql = 'insert into star values (?)'
+    const { productId } = req.body
+    sqlHandler(sql, [productId], results => {
+        if (results.affectedRows) {
+            res.send({ code: '00000', msg: '收藏成功' })
+        } else {
+            res.send({ code: '-1', msg: '收藏失败' })
+        }
+    })
+})
+
+//取消收藏商品
+router.post('/cancelStar', (req, res, next) => {
+    const sql = 'delete from star where productId = ?'
+    const { productId } = req.body
+    sqlHandler(sql, [productId], results => {
+        if (results.affectedRows) {
+            res.send({ code: '00000', msg: '已取消收藏' })
+        } else {
+            res.send({ code: '-1', msg: '取消收藏失败' })
+        }
+    })
+})
+
+//获取所有已收藏商品
+router.get('/listStared', (req, res, next) => {
+    const sql = 'select * from star'
+    sqlHandler(sql, [], results => {
+        res.send({
+            code: '00000',
+            records: results
+        })
+    })
+})
+
 module.exports = router
