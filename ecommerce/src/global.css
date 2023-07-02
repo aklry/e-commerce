@@ -86,6 +86,14 @@ li {
     font-size: inherit;
 }
 
+.adm-toast-mask .adm-toast-mask-icon .adm-toast-icon {
+    font-size: .6rem;
+}
+
+.adm-toast-mask .adm-toast-mask-icon{
+    padding: .35rem .8rem;
+}
+
 .footer {
     width: 100%;
     display: flex;
