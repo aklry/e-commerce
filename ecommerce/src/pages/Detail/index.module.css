@@ -1,3 +1,11 @@
+.container {
+    background-color: #f6f6f6;
+}
+
+.container :global(.adm-card) {
+    border-radius: .28rem;
+}
+
 .swiper {
     height: 6rem;
 }
@@ -41,7 +49,50 @@
     font-size: .2rem;
 }
 
-.star :global(.antd-mobile-icon) {
+.star :global(.antd-mobile-icon),
+.selectContainer :global(.antd-mobile-icon) {
     font-size: .4rem;
 }
 
+.popupBody {
+    height: 80vh;
+    padding: .3rem;
+    box-sizing: border-box;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+
+.popupBody img {
+    width: 2rem;
+    height: 2rem;
+}
+
+:global(.adm-capsule-tabs-tab-active) {
+    background-color: red;
+}
+
+.stepper {
+    margin: .3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+:global(.adm-rate) {
+    --star-size: .3rem;
+    --active-color: red;
+    --inactive-color: #33333352
+}
+
+.iconTitle {
+    margin-left: .2rem;
+    margin-bottom: .2rem;
+}
+
+.iconTitle::before {
+    content: '';
+    display: inline-block;
+    width: .3em;
+    height: .8em;
+    background-color: red;
+    margin-right: .08rem;
+}
