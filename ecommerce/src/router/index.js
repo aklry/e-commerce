@@ -7,6 +7,7 @@ const Types = React.lazy(() => import('../pages/Types'))
 const SearchPage = React.lazy(() => import('../pages/Search'))
 const ListPage = React.lazy(() => import('../pages/List'))
 const DetailPage = React.lazy(() => import('../pages/Detail'))
+const OrderPage = React.lazy(() => import('../pages/ConfirmOrder'))
 
 
 export default (
@@ -19,6 +20,7 @@ export default (
                 <Route path='/list' element={<ListPage />} />
                 <Route path='/details' element={<DetailPage />} />
                 <Route path='/error' element={<ErrorPage />} />
+                <Route path='/confirmOrder' element={<OrderPage />} />
             </Routes>
         </BrowserRouter>
     </Suspense>
