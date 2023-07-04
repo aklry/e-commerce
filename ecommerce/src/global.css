@@ -68,7 +68,8 @@ li {
 .adm-infinite-scroll,
 .adm-popover-inner,
 .adm-popover-menu-item-icon,
-.adm-toast-mask .adm-toast-main {
+.adm-toast-mask .adm-toast-main,
+.adm-capsule-tabs-tab {
     font-size: var(--adm-font-size-main);
 }
 
@@ -99,4 +100,5 @@ li {
     display: flex;
     position: fixed;
     bottom: 0;
+    left: 0;
 }
