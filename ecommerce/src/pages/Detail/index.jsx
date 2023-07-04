@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../api/product'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import SwiperCom from './Swiper'
-import { Card, Space, Toast } from 'antd-mobile'
+import Select from './Select'
+import Evaluation from './Evaluation'
+import { Button, Card, Space, Toast } from 'antd-mobile'
 import style from './index.module.css'
 import { HeartOutline, HeartFill } from 'antd-mobile-icons'
+import Introduce from './Introduce'
 
 export default function Detail() {
     const location = useLocation()
+    const navigate = useNavigate()
     const [stared, setStared] = useState(false)
     const [details, setDetails] = useState({})
+    const [productAttr, setProductAttr] = useState({})
     const { id } = location.state
     const starHandler = () => {
         api.starProduct(details.id)
@@ -72,6 +77,18 @@ export default function Detail() {
             })
             .catch(error => console.log(error))
     }, [id])
+    //商品购买
+    const onBuy = () => {
+        navigate('/confirmOrder', {
+            state: {
+                details: { ...details, selectedAttr: productAttr }
+            }
+        })
+    }
+    //商品规格
+    const onProductAttrChange = select => {
+        setProductAttr(select)
+    }
     return (
         <>
             <SwiperCom imgUrl={details.mainPic ? details.mainPic.split(','[0]) : []} />
@@ -95,6 +112,25 @@ export default function Detail() {
                     <h4>{details.name}</h4>
                 </div>
             </Card>
+            <Card>
+                <Select details={details} onChange={onProductAttrChange} />
+            </Card>
+            <Card>
+                <Evaluation details={details} />
+            </Card>
+            <Card style={{ margin: '.2rem', padding: 0 }}>
+                <Introduce details={details} />
+            </Card>
+            <div className='footer'>
+                {
+                    stared
+                        ?
+                        <Button block color='warning' onClick={cancelStarHandler}>取消收藏</Button>
+                        :
+                        <Button block color='warning' onClick={starHandler}>收藏</Button>
+                }
+                <Button block onClick={onBuy} color='danger'>立即购买</Button>
+            </div>
         </>
     )
 }
