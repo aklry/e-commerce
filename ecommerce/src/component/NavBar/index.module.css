@@ -13,3 +13,6 @@
 .nav :global(.adm-nav-bar) {
     height: 100%;
 }
+.nav :global(.adm-nav-bar-title) {
+    font-size: inherit;
+}
