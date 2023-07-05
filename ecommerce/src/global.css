@@ -66,11 +66,13 @@ li {
 
 .adm-divider,
 .adm-infinite-scroll,
-.adm-popover-inner,
-.adm-popover-menu-item-icon,
+.adm-cascader-view-header-title .adm-popover-menu-item-icon,
 .adm-toast-mask .adm-toast-main,
-.adm-capsule-tabs-tab {
-    font-size: var(--adm-font-size-main);
+.adm-capsule-tabs-tab,
+.adm-cascader-header-title,
+.adm-cascader-header-button, 
+.adm-cascader-view-item {
+    font-size: var(--adm-font-size-main) !important;
 }
 
 /*取消页面滚动条*/
@@ -91,7 +93,7 @@ li {
     font-size: .6rem;
 }
 
-.adm-toast-mask .adm-toast-mask-icon{
+.adm-toast-mask .adm-toast-mask-icon {
     padding: .35rem .8rem;
 }
 
@@ -101,4 +103,36 @@ li {
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+.content .adm-list-item-content-arrow {
+    color: initial;
+}
+
+.content .adm-radio {
+    --icon-size: .3rem;
+}
+
+.content .adm-input {
+    --font-size: .28rem;
+    --color: var(--adm-color-text);
+    --placeholder-color: #cebebe;
+}
+
+.adm-cascader-views-tabs.adm-tabs,
+.adm-tabs {
+    --title-font-size: .28rem;
+}
+
+.adm-cascader-view-header-title {
+    font-size: .28rem;
+    max-width: inherit !important;
+}
+
+.adm-form-item-label {
+    font-size: .28rem;
+}
+
+.adm-list-item-content-extra {
+    font-size: .4rem;
 }
