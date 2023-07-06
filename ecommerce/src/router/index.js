@@ -13,7 +13,8 @@ const AddressForm = React.lazy(() => import('../pages/AddressForm'))
 const OrderPage = React.lazy(() => import('../pages/Orders'))
 const EvaluationPage = React.lazy(() => import('../pages/Evaluation'))
 const EvaluationListPage = React.lazy(() => import('../pages/EvaluationList'))
-
+const MyPage = React.lazy(() => import('../pages/My'))
+const AddressListPage = React.lazy(() => import('../pages/AddressList'))
 
 export default (
     <Suspense fallback={ <SpinLoading/> }>
@@ -31,6 +32,8 @@ export default (
                 <Route path='/orders' element={<OrderPage />} />
                 <Route path='/evaluate' element={<EvaluationPage />} />
                 <Route path='/evaluateList' element={<EvaluationListPage />} />
+                <Route path='/my' element={<MyPage />} />
+                <Route path='/addressList' element={<AddressListPage />} />
             </Routes>
         </BrowserRouter>
     </Suspense>

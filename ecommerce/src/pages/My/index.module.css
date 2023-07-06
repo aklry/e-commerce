@@ -1,0 +1,26 @@
+.header {
+    padding-top: .6rem;
+    background-color: red;
+    color: #fff;
+}
+
+.header :global(.adm-image.adm-avatar) {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+.header :global(.adm-grid-item) {
+    text-align: center;
+    margin-bottom: .5rem;
+    line-height: .5rem;
+}
+
+.header h3 {
+    text-align: left;
+    line-height: 1rem;
+}
+
+.header :global(.adm-mobile-icon) {
+    font-size: .46rem;
+}
