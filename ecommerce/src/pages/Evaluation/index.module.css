@@ -1,0 +1,13 @@
+.container :global(.adm-space) {
+    width: 100%;
+    margin-bottom: .15rem;
+}
+
+.container label {
+    display: inline-block;
+    width: 1.6rem;
+}
+
+.container :global(.adm-rate) {
+    --star-size: 0.3rem; 
+}

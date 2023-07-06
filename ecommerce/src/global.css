@@ -71,7 +71,13 @@ li {
 .adm-capsule-tabs-tab,
 .adm-cascader-header-title,
 .adm-cascader-header-button, 
-.adm-cascader-view-item {
+.adm-cascader-view-item,
+.adm-dialog-body .adm-dialog-content,
+.adm-dialog-body,
+.adm-dialog-footer .adm-dialog-action-row > .adm-dialog-button,
+.adm-text-area-count,
+.adm-rate,
+.adm-rate-star{
     font-size: var(--adm-font-size-main) !important;
 }
 
@@ -113,7 +119,8 @@ li {
     --icon-size: .3rem;
 }
 
-.content .adm-input {
+.content .adm-input,
+.content .adm-text-area {
     --font-size: .28rem;
     --color: var(--adm-color-text);
     --placeholder-color: #cebebe;
@@ -135,4 +142,11 @@ li {
 
 .adm-list-item-content-extra {
     font-size: .4rem;
+}
+.adm-dialog-footer .adm-dialog-action-row > .adm-dialog-button {
+    padding: .2rem !important;
+}
+
+.adm-rate-star-active {
+    color: red !important;
 }
