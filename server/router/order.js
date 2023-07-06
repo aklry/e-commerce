@@ -11,11 +11,11 @@ router.post('/add', (req, res, next) => {
         if (results.affectedRows) {
             res.send({ code: '00000' })
         } else {
-            res.send({ code: '-1'})
+            res.send({ code: '-1' })
         }
     })
 })
-//获取所有订单信息系
+//获取所有订单信息
 router.get('/list', (req, res, next) => {
     const sql = 'select * from orders'
     sqlHandler(sql, [], results => {
@@ -23,6 +23,18 @@ router.get('/list', (req, res, next) => {
             code: '00000',
             records: results
         })
+    })
+})
+//删除订单信息
+router.post('/delete', (req, res, next) => {
+    const { id } = req.body
+    const sql = 'delete from orders where id = ?'
+    sqlHandler(sql, [id], results => {
+        if (results.affectedRows) {
+            res.send({ code: '00000', msg: '删除成功' })
+        } else {
+            res.send({ code: '-1', msg: '删除失败' })
+        }
     })
 })
 
