@@ -18,7 +18,11 @@ export default function Evaluation(props) {
   }, [details])
   //查看全部评价
   const onViewMore = () => {
-    navigate('/evaluateList')
+    navigate('/evaluateList', {
+      state: {
+        id: details.id
+      }
+    })
   }
   return (
     <>
