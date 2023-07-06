@@ -28,7 +28,7 @@ export default function ConfirmOrder() {
                 dispatch(setAddress(records))
             }())
         }
-    }, [])
+    }, [address, dispatch])
     const addAddress = () => {
         navigate('/addressSelect')
     }
@@ -48,7 +48,8 @@ export default function ConfirmOrder() {
             addressId: address.id,
             total
         })
-        if (result) {
+        const { code } = result.data
+        if (code !== '-1') {
             Toast.show({
                 icon: 'success',
                 content: '操作成功'
