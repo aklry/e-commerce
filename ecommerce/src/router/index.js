@@ -7,9 +7,12 @@ const Types = React.lazy(() => import('../pages/Types'))
 const SearchPage = React.lazy(() => import('../pages/Search'))
 const ListPage = React.lazy(() => import('../pages/List'))
 const DetailPage = React.lazy(() => import('../pages/Detail'))
-const OrderPage = React.lazy(() => import('../pages/ConfirmOrder'))
+const ConfirmOrderPage = React.lazy(() => import('../pages/ConfirmOrder'))
 const AddressSelect = React.lazy(() => import('../pages/AddressSelect'))
 const AddressForm = React.lazy(() => import('../pages/AddressForm'))
+const OrderPage = React.lazy(() => import('../pages/Orders'))
+const EvaluationPage = React.lazy(() => import('../pages/Evaluation'))
+const EvaluationListPage = React.lazy(() => import('../pages/EvaluationList'))
 
 
 export default (
@@ -22,9 +25,12 @@ export default (
                 <Route path='/list' element={<ListPage />} />
                 <Route path='/details' element={<DetailPage />} />
                 <Route path='/error' element={<ErrorPage />} />
-                <Route path='/confirmOrder' element={<OrderPage />} />
+                <Route path='/confirmOrder' element={<ConfirmOrderPage />} />
                 <Route path='/addressSelect' element={<AddressSelect />} />
                 <Route path='/addAddress' element={<AddressForm />} />
+                <Route path='/orders' element={<OrderPage />} />
+                <Route path='/evaluate' element={<EvaluationPage />} />
+                <Route path='/evaluateList' element={<EvaluationListPage />} />
             </Routes>
         </BrowserRouter>
     </Suspense>
