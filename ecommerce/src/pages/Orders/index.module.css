@@ -1,0 +1,14 @@
+.footer {
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: .2rem;
+}
+
+.footer button {
+    margin-left: .15rem;
+}
+
+.money {
+    text-align: right;
+    padding-bottom: .2rem;
+}
