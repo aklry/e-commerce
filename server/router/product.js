@@ -5,7 +5,6 @@ const sqlHandler = require('../mysql/index')
 
 router.get('/hotWords', (req, res, next) => {
     const sql = 'select * from hotwords'
-    const { pid } = req.query
     sqlHandler(sql, [], results => {
         res.send({
             code: '00000',
@@ -101,6 +100,20 @@ router.get('/listStared', (req, res, next) => {
             records: results
         })
     })
+})
+
+//根据商品id获取详细信息
+router.get('/getListById', (req, res, next) => {
+    const { ids } = req.query
+    if (ids) {
+        let sql = `select * from product where id in (${ids})`
+        sqlHandler(sql, [], results => { 
+            res.send({ code: '00000', records: results})
+        })
+    } else {
+        res.send({msg: '暂无数据'})
+    }
+    
 })
 
 module.exports = router
