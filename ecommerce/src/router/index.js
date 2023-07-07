@@ -15,6 +15,7 @@ const EvaluationPage = React.lazy(() => import('../pages/Evaluation'))
 const EvaluationListPage = React.lazy(() => import('../pages/EvaluationList'))
 const MyPage = React.lazy(() => import('../pages/My'))
 const AddressListPage = React.lazy(() => import('../pages/AddressList'))
+const StarPage = React.lazy(() => import('../pages/Star'))
 
 export default (
     <Suspense fallback={ <SpinLoading/> }>
@@ -34,6 +35,7 @@ export default (
                 <Route path='/evaluateList' element={<EvaluationListPage />} />
                 <Route path='/my' element={<MyPage />} />
                 <Route path='/addressList' element={<AddressListPage />} />
+                <Route path='/star' element={<StarPage />} />
             </Routes>
         </BrowserRouter>
     </Suspense>
