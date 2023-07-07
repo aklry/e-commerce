@@ -4,14 +4,15 @@ import {
 
 const base = {
     getTypeList: '/types/getList',
-    getProductHotWords: '/search/hotWords',
+    getProductHotWords: '/product/hotWords',
     getProductTypeId: '/types/getTypeId',
     getBrandByTypeId: '/product/getBrand',
     getProduct: '/product/getProduct',
     getDetails: '/product/getDetails',
     starProduct: '/product/star',
     cancelStarProduct: '/product/cancelStar',
-    getListStared: '/product/listStared'
+    getListStared: '/product/listStared',
+    getListById: '/product/getListById'
 }
 const api = {
     getList:  pid =>  global.axios.get(baseUrl + base.getTypeList, {params: {pid}}), //根据商品pid获取数据
@@ -22,6 +23,7 @@ const api = {
     getDetails: id => global.axios.get(baseUrl + base.getDetails, { params: { id } }), //获取商品详情
     starProduct: productId => global.axios.post(baseUrl + base.starProduct, { productId }), //收藏商品
     cancelStarProduct: productId => global.axios.post(baseUrl + base.cancelStarProduct, { productId }), //取消收藏商品
-    getListStared: () => global.axios.get(baseUrl + base.getListStared)
+    getListStared: () => global.axios.get(baseUrl + base.getListStared),//获取所有已收藏商品
+    getListById: ids => global.axios.get(baseUrl + base.getListById, {params: { ids }}), //获取所有收藏商品的信息
 }
 export default api;
