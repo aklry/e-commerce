@@ -1,0 +1,31 @@
+.container :global(.adm-space) {
+    width: 100%;
+    padding: .2rem;
+    box-sizing: border-box;
+}
+
+.container h3 {
+    color: red;
+    text-align: right;
+}
+
+.container img {
+    width: 100%;;
+}
+
+.container h4,
+.container h3 {
+    font-size: .28rem;
+}
+
+/* .container h4 {
+    font-size: .28rem;
+} */
+
+.container :global(.adm-checkbox) {
+    --icon-size: .3rem;
+}
+
+.container :global(.adm-grid) {
+    align-items: center;
+}
